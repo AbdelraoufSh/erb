@@ -4,13 +4,16 @@
 ```
 npm install
 ```
-
-### Compiles and hot-reloads for development
+### first run api 
+```
+node server
+```
+### then compile and run the project (if you want to enable HMR)
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Compiles and minifies for production (without HMR)
 ```
 npm run build
 ```
@@ -19,9 +22,6 @@ npm run build
 ```
 npm run lint
 ```
-### and for api
-```
-node server
-```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
