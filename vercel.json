@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "builds": [
     {
       "src": "**/*",
@@ -10,10 +11,16 @@
       "use": "@vercel/node"
     }
   ],
+=======
+>>>>>>> 9055ce5e468a32bd67091dcec41edffd0d94c738
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "api/server.js"
-    }
-  ]
+    { "src": "/api/(.*)", "dest": "/api/server.js" },
+    { "src": "/(.*)", "dest": "/dist/index.html" }
+  ],
+  "builds": [
+    { "src": "api/server.js", "use": "@vercel/node" },
+    { "src": "package.json", "use": "@vercel/static-build" }
+  ],
+  "buildCommand": "npm install && npm run build",
+  "outputDirectory": "dist"
 }
